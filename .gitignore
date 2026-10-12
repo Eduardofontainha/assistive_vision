@@ -5,7 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
-
+.gitignore
+#YOLOv8 model files
+*.pt
 # Distribution / packaging
 .Python
 build/
