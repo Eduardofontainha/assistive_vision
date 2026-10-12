@@ -7,6 +7,11 @@ class DetectedObject:
     label: str
     confidence: float
     bounding_box: tuple[int, int, int, int]  # (x_min, y_min, x_max, y_max)
+    @property
+    def area(self) -> int:
+        """Calculates the area of ​​the bounding box in square pixels."""
+        x_min, y_min, x_max, y_max = self.bounding_box
+        return (x_max - x_min) * (y_max - y_min)
 
 class ObjectDetector(ABC):
     """
