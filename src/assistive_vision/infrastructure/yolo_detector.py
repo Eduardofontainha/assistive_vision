@@ -11,7 +11,7 @@ class YoloDetector(ObjectDetector):
 
     def detect_objects(self, image: np.ndarray) -> list[DetectedObject]:
 
-        results = self.model(image, verbose=False)
+        results = self.model(image, verbose=False, imgsz=320)
         
         detected_objects = []
         
